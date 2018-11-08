@@ -1,45 +1,116 @@
 <!DOCTYPE html>
 <html>
-<CENTER>
-<head>
-	<title>TABLE</title>
-    <link rel="stylesheet" type="text/css" href="/tugassarah/css/style.css">
-</head>
-<body>
-<table border="1">
-<h1>TABLE</h1>
-<tr>
-	<td>NPM</td>
-	<td>NAMA</td>
-	<td>TGL LAHIR</td>
-</tr>
-<tr >
-	<td>16115403</td>
-	<td>Sarah Shafyana</td>
-	<td>12 07 1997</td>
-</tr>
-<form action="" method="">
- <table border="1">
-   <h1>FORM</h1>
-     <tr>
-         <td> NPM : </td>
-         <td><input type="text" /></td>
-     </tr>
-     <tr>
-         <td> NAMA : </td>
-         <td><input type="text" /></td>
-     </tr>
-     <tr>
-         <td> TGL LAHIR : </td>
-         <td><input type="text" /></td>
-     </tr>
-     <tr>
-         <td><input type="submit" value="Submit"/></td>
-     </tr>
- </table>
- </form>
 
-</table>
+<head>
+
+<title>table</title> 
+<script>
+            function validasi(){
+                var npm = document.getElementById('npm');
+                var nama = document.getElementById('nama');
+                var kelas = document.getElementById('kelas');
+ 
+                if (harusDiisi(npm, "npm belum diisi")) {
+                    if (harusDiisi(nama, "nama belum diisi")) {
+                        if (harusDiisi(kelas, "kelas belum diisi")) {
+                            return true;
+                        };
+                    };
+                };
+                return false;
+            }
+ 
+            function harusDiisi(att, msg){
+                if (att.value.length == 0) {
+                    alert(msg);
+                    att.focus();
+                    return false;
+                }
+ 
+                return true;
+            }
+        </script>
+
+<link rel="stylesheet" type="text/css" href="bootstrap\css\warna.css">
+
+</head>
+
+<body>
+
+    <table border="1">
+
+
+    <tr>
+
+    <td>Nama</td>
+
+    <td>Kelas</td>
+
+    <td>Npm</td>
+
+    </tr>
+
+
+    <tr>
+
+    <td>Anda</td>
+
+    <td>4KA20</td>
+
+    <td>120797</td>
+
+    </tr>
+
+
+    <tr>
+
+    <td>Sarah</td>
+
+    <td>4KA20</td>
+
+    <td>16115403</td>
+
+    </tr>
+
+
+    <tr>
+
+    <td>Shafyana</td>
+
+    <td>4KA20</td>
+
+    <td>77821318""</td>
+
+    </tr>
+
+    </table>
+
+
+    <br>
+
+
+    <form id="tabel" onsubmit="return validasi()" action="simpan.php method="post"">
+
+    Nama:<br>
+
+    <input type="text" name="nama" id="nama"><br>
+
+    Kelas:<br>
+
+    <input type="integer" name="kelas" id="kelas"><br>
+
+    NPM:<br>
+
+    <input type="integer" name="npm" id="npm"><br>
+
+    <br>
+
+    <input type="submit" value="Submit">
+
+    </form>
+
+
 </body>
-</CENTER>
+
 </html>
+
